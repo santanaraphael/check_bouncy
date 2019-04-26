@@ -15,8 +15,15 @@ def check_bouncy(number):
 
 
 def bouncy_number(target):
-    return None
+    number = 0
+    result = 0
+    while number <= target:
+        if check_bouncy(number):
+            result += 1
+        number += 1
+    return result
 
 
 def challenge():
     return None
+
