@@ -11,7 +11,8 @@ class TestChecker(unittest.TestCase):
         self.assertFalse(cb.check_bouncy(0))
 
     def test_bouncy_number(self):
-        pass
+        self.assertEqual(cb.bouncy_number(538), 538*0.5)
+        self.assertEqual(cb.bouncy_number(21780), 21780*0.9)
 
 
 if __name__ == '__main__':
