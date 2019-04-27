@@ -22,5 +22,11 @@ class TestBouncyNumbers(unittest.TestCase):
         self.assertRaises(TypeError, cb.challenge, 'foo')
         self.assertRaises(ValueError, cb.challenge, 1)
 
+    def test_challenge(self):
+        answer = 1587000
+        amount = cb.bouncy_number(answer)
+        self.assertEquals(amount/answer, 0.99)
+
+
 if __name__ == '__main__':
     unittest.main()
