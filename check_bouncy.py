@@ -8,7 +8,11 @@ def check_bouncy(number):
     :return: True if the number is bouncy or False if its not.
     """
 
-    number = str(number)  # We need to work with numbers as strings, to check each individual digit
+    number = str(number)  # We need to work with numbers as strings, to check each individual digit.
+
+    if not number.isdigit():
+        raise TypeError('The number argument must be an integer type.')
+
     increasing = True     # We first assume the number is both increasing and decreasing
     decreasing = True
 
@@ -31,6 +35,9 @@ def bouncy_number(target):
     :return: The amount of bouncy numbers in that range.
     """
 
+    if not str(target).isdigit():
+        raise TypeError('The number argument must be an integer type.')
+
     number = 0  # We start on the number zero, just for simplicity, but in fact, we could start at the first
     result = 0  # bouncy number, which is 101.
     while number <= target:
@@ -46,6 +53,9 @@ def challenge(ratio=0.99):
     :param ratio: The ratio in its decimal form (e.g. 99% = 0.99)
     :return: The least number which satisfies the condition.
     """
+
+    if float(ratio) >= 1:
+        raise ValueError('The final ratio must be a decimal ratio smaller than 1.')
     number = 1   # We use 1 as the starting point there to avoid a division by zero in the algorithm,
     results = 0  # we could choose any number less or equal than 101, but we choose 1 for the beauty of code.
     while True:
