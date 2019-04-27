@@ -1,12 +1,12 @@
 # check_bouncy
 
-This script checks for if a number is bouncy, that is neither increasing nor decreasing.  
+This script checks if a number is bouncy, that is, neither increasing nor decreasing.  
 
 The check_bouncy function does this job and returns whether the number is bouncy or not.  
 
 The bouncy_number function checks for every integer until the desired number and returns the amount of bouncy numbers in that range.  
   
-Finally, the challenge function will loop over the integer numbers until a given percentage is achieved, then it will return the final number as the answer to the challenge.
+Finally, the challenge function will loop over the integer numbers until a given percentage of bouncy numbers over the whole amount is achieved, then it will return the final number as the answer to the challenge.
 
 ## What is a Bouncy Number?
 
@@ -54,6 +54,19 @@ python check_bouncy.py 0.9
 ```
 
 In the above example, the script will run the challenge algorithm with the target ratio of 90%. 
+
+### Use the check_bouncy function
+
+In case you only want to use the check_bouncy() function yourself, all you have to do is:
+
+```
+from check_bouncy import check_bouncy
+
+
+result = check_bouncy(your_number)
+```
+
+This function will return True or False depending on the number you use as the argument.
 
 ## Challenge results
 
