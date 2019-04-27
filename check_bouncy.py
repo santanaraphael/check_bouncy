@@ -50,12 +50,16 @@ def bouncy_number(target):
 def challenge(ratio=0.99):
     """
     It returns the least number for which the proportion of bouncy numbers is exactly a ratio.
-    :param ratio: The ratio in its decimal form (e.g. 99% = 0.99)
+    :param ratio: The ratio in its decimal form (e.g. 99% = 0.99). It must be smaller than 100% because no matter how
+        big the sample, the amount of bouncy numbers will never be equal or greater than the total amount of numbers
     :return: The least number which satisfies the condition.
     """
 
+    if not str(ratio).isnumeric():
+        raise TypeError('The final ratio must be a decimal number.')
     if float(ratio) >= 1:
-        raise ValueError('The final ratio must be a decimal ratio smaller than 1.')
+        raise ValueError('The final ratio must be a decimal value smaller than 1.')
+    
     number = 1   # We use 1 as the starting point there to avoid a division by zero in the algorithm,
     results = 0  # we could choose any number less or equal than 101, but we choose 1 for the beauty of code.
     while True:
