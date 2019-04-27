@@ -2,11 +2,16 @@
 
 This script checks for if a number is bouncy, that is neither increasing nor decreasing.  
 
-The check_bouncy function does this job and returns wether the number is bouncy or not.  
+The check_bouncy function does this job and returns whether the number is bouncy or not.  
 
 The bouncy_number function checks for every integer until the desired number and returns the amount of bouncy numbers in that range.  
   
 Finally, the challenge function will loop over the integer numbers until a given percentage is achieved, then it will return the final number as the answer to the challenge.
+
+## What is a Bouncy Number?
+
+If a number is neither an increasing number (each digit from the left to the right is greater than or equal to the previous one) or decreasing (the opposite), it is a bouncy number.
+The first bouncing number is 101. 
 
 ## Getting Started
 
@@ -52,4 +57,4 @@ In the above example, the script will run the challenge algorithm with the targe
 
 ## Challenge results
 
-The least number for which the proportion of bouncy numbers to the whole sample is 99% is **1587000**
+The least number for which the proportion of bouncy numbers to the whole sample is 99% is **1587000**.
