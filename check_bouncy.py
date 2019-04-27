@@ -64,5 +64,3 @@ if __name__ == '__main__':
         challenge(ratio=sys.argv[1])
     else:
         challenge()
-
-
